@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="com.polarcape.plugins.geolocation"
+      version="1.0.0">
+
+    <name>PCGeolocation</name>
+    <description>Cordova geolocation plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,geolocation,information,location,gkopevski</keywords>
+    <repo>https://github.com/PolarCape/polarcape-cordova-plugin-geolocation.git</repo>
+
+    <js-module src="www/PCGeolocation.js" name="pcGeolocation">
+        <clobbers target="pcGeolocation" />
+    </js-module>
+
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="PCGeolocation">
+                <param name="android-package" value="com.polarcape.plugins.geolocation.PCGeolocation"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+        <source-file src="src/android/PCGeolocation.java" target-dir="src/com/polarcape/plugins/geolocation" />
+        <source-file src="src/android/GPSTracker.java" target-dir="src/com/polarcape/plugins/geolocation" />
+
+    </platform>
+</plugin>
