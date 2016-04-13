@@ -1,4 +1,4 @@
-#polarcape-cordova-plugin-geolocation
+#polarcape-cordova-plugin-geolocation (Android)
 
 Cordova geolocation plugin
 
