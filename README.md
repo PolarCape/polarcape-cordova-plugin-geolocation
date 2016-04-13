@@ -9,7 +9,7 @@ Cordova geolocation plugin
 	pcGeolocation.getLocation(callback,args);
 
 #Example
-	
+```javascript	
 	                          var nativePopUpMessages = {
                                 'message': translations['Plugins.geolocation.title'],
                                 'title': translations['Plugins.geolocation.message'],
